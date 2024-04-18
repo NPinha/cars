@@ -14,13 +14,15 @@
   width: 100%;
   max-width: 405px;
   justify-content: space-between;
+  filter: contrast(100%);
 }
 
 .vehicle-card__img {
   margin-block: auto;
+  object-fit: cover;
 }
 
-mat-card-content {
+.vehicle-card-content {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -28,14 +30,15 @@ mat-card-content {
   padding-inline: 10px;
   gap: 20px;
   min-height: 145px;
+  filter: contrast(75%);
 }
 
-mat-card-title {
+.vehicle-card-content__title {
   border-top: 2px solid black;
   border-bottom: 2px solid black;
 }
 
-.mat-card-content__div {
+.vehicle-card-content__div {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -46,4 +49,35 @@ mat-card-title {
 span {
   color: gray;
   text-align: center;
+}
+
+@media screen and (max-width: 576px) {
+  .vehicle-card {
+    flex-direction: row;
+    justify-content: left;
+    gap: 10px;
+    max-width: none;
+  }
+
+  .vehicle-card__img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .vehicle-card-content {
+    align-items: start;
+  }
+
+  .vehicle-card-content__title {
+    border-top: none;
+    border-bottom: none;
+  }
+
+  .vehicle-card-content__div {
+    align-items: start;
+  }
+
+  span {
+    text-align: left;
+  }
 }

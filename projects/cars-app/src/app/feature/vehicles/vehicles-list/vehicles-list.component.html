@@ -8,11 +8,14 @@
         srcset="../../../../assets{{ item.media[1].url }} 1x, ../../../../assets{{ item.media[0].url }} 2x"
         alt="Photo of a {{ item.name }}"
         defaultImage
+        loading="lazy"
       />
 
-      <mat-card-content>
-        <mat-card-title>{{ item.name }}</mat-card-title>
-        <div class="mat-card-content__div">
+      <mat-card-content class="vehicle-card-content">
+        <mat-card-title class="vehicle-card-content__title">{{
+          item.name
+        }}</mat-card-title>
+        <div class="vehicle-card-content__div">
           <span>{{ item.price }}</span>
           <span>{{ item.description }}</span>
         </div>

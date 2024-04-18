@@ -15,5 +15,7 @@ export class DefaultImageDirective {
 
     this.elementRef.nativeElement.srcset =
       './../../../assets/images/default-fallback-image.jpeg';
+
+    this.elementRef.nativeElement.height = 200;
   }
 }
