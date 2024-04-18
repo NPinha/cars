@@ -13,20 +13,21 @@
 .vehicle-card {
   width: 100%;
   max-width: 405px;
-  min-height: 350px;
+  justify-content: space-between;
 }
 
 .vehicle-card__img {
-  height: 80%;
-  object-fit: fill;
+  margin-block: auto;
 }
 
 mat-card-content {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 16px 10px;
+  padding-block: 16px;
+  padding-inline: 10px;
   gap: 20px;
+  min-height: 145px;
 }
 
 mat-card-title {
@@ -44,4 +45,5 @@ mat-card-title {
 
 span {
   color: gray;
+  text-align: center;
 }

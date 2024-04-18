@@ -2,20 +2,17 @@
 export interface Vehicle {
   id: string;
   name: string;
+  description: string;
+  price: string;
   modelYear: string;
   apiUrl: string;
   media: Media[];
+  meta: Meta;
 }
 
 interface Media {
   name: string;
   url: string;
-}
-
-export interface VehicleDetails {
-  id: string;
-  description: string;
-  meta: Meta;
 }
 
 interface Meta {

@@ -14,19 +14,5 @@ import { DefaultImageDirective } from '../../../core/directives/image-fallback.d
 })
 export class VehiclesListComponent {
   protected vehicleService = inject(VehiclesService);
-  // vehiclesList = signal(this.vehicleService.readAll());
-
   vehiclesList$ = this.vehicleService.readAll();
-
-  //= this.vehicleService.readAll();
-
-  // ngOnInit(): void {
-  //   // console.log(this.vehiclesList());
-  // }
-
-  // ngOnChanges(changes: SimpleChanges): void {
-  //   if (changes) {
-  //     console.log('vehicles', this.vehiclesList$);
-  //   }
-  // }
 }
