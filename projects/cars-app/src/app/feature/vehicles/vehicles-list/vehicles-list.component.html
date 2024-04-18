@@ -1,0 +1,22 @@
+<ng-container *ngIf="vehiclesList$ | async as list">
+  <div class="list-group">
+    <mat-card *ngFor="let item of list" class="vehicle-card">
+      <img
+        class="vehicle-card__img"
+        mat-card-image
+        src="../../../../assets{{ item.media[0].url }}"
+        srcset="../../../../assets{{ item.media[1].url }} 1x, ../../../../assets{{ item.media[0].url }} 2x"
+        alt="Photo of a {{ item.name }}"
+        defaultImage
+      />
+
+      <mat-card-content>
+        <mat-card-title>{{ item.name }}</mat-card-title>
+        <div class="mat-card-content__div">
+          <span>From 75 Euro</span>
+          <span>The pinaple of refined capability</span>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</ng-container>
