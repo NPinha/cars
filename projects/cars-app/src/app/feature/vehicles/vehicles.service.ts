@@ -17,7 +17,7 @@ export class VehiclesService {
   readAll(): Observable<Vehicle[]> {
     return this.http.get<Vehicle[]>(`${baseApi}/api/vehicles`).pipe(
       mergeMap((vehiclesList) => {
-        const result: Observable<Vehicle>[] = vehiclesList.map((item) =>
+        const result = vehiclesList.map((item) =>
           this.read(item.id).pipe(
             map((vehicleDetail) => ({
               ...item,
