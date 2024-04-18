@@ -2,11 +2,11 @@
 export interface Vehicle {
   id: string;
   name: string;
-  description: string;
-  price: string;
   modelYear: string;
   apiUrl: string;
   media: Media[];
+  description: string;
+  price: string;
   meta: Meta;
 }
 
